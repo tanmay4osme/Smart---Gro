@@ -83,7 +83,7 @@ class SubPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Sub Page'),
-        backgroundColor: Colors.redAccent,
+        backgroundColor: Colors.purpleAccent,
       ),
       body: Center(
         child: Column(
@@ -91,8 +91,8 @@ class SubPage extends StatelessWidget {
           children: <Widget>[
             Text('Click button to back to Main Page'),
             RaisedButton(
-              textColor: Colors.white,
-              color: Colors.redAccent,
+              textColor: Colors.green,
+              color: Colors.brown,
               child: Text('Back to Main Page'),
               onPressed: () {
                 backToMainPage(context);
@@ -115,7 +115,7 @@ class SubPage2 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Sub Page 2'),
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.purpleAccent,
       ),
       body: Center(
         child: Column(
@@ -123,8 +123,8 @@ class SubPage2 extends StatelessWidget {
           children: <Widget>[
             Text('Click button to back to Main Page'),
             RaisedButton(
-              textColor: Colors.white,
-              color: Colors.redAccent,
+              textColor: Colors.green,
+              color: Colors.brown,
               child: Text('Back to Main Page'),
               onPressed: () {
                 backToMainPage(context);
@@ -147,7 +147,7 @@ class SubPage3 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Sub Page 3'),
-        backgroundColor: Colors.orangeAccent,
+        backgroundColor: Colors.purpleAccent,
       ),
       body: Center(
         child: Column(
@@ -155,8 +155,8 @@ class SubPage3 extends StatelessWidget {
           children: <Widget>[
             Text('Click button to back to Main Page'),
             RaisedButton(
-              textColor: Colors.white,
-              color: Colors.redAccent,
+              textColor: Colors.green,
+              color: Colors.brown,
               child: Text('Back to Main Page'),
               onPressed: () {
                 backToMainPage(context);
@@ -179,7 +179,7 @@ class SubPage4 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Sub Page 4'),
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.purpleAccent,
       ),
       body: Center(
         child: Column(
@@ -187,8 +187,8 @@ class SubPage4 extends StatelessWidget {
           children: <Widget>[
             Text('Click button to back to Main Page'),
             RaisedButton(
-              textColor: Colors.white,
-              color: Colors.redAccent,
+              textColor: Colors.green,
+              color: Colors.brown,
               child: Text('Back to Main Page'),
               onPressed: () {
                 backToMainPage(context);
