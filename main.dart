@@ -1,45 +1,81 @@
 import 'package:flutter/material.dart';
+import 'info.dart';
+import 'plants.dart';
+import 'settings.dart';
+import 'connect.dart';
+void main() => runApp(App());
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  void answerQuestion() {
-    print('Answer chosen!');
-  }
-
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var questions = [
-      'What\'s your favoirte color?',
-      'What\'s your favoirte color?',
-    ];
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('My First App'),
-        ),
-        body: Column(
-          children: [
-            Text('The question!'),
+      title: 'Flutter Navigation',
+      home: MainPage(),
+    );
+  }
+}
+
+class MainPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Gardening App Home Page'),
+        backgroundColor: Colors.purpleAccent,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('Click button to move to SubPage'),
             RaisedButton(
-                child: Text(
-                  'Answer 1',
-                ),
-                onPressed: answerQuestion),
+              textColor: Colors.green,
+              color: Colors.brown,
+              child: Text('Go to SubPage 1/Info/Getting Started'),
+              onPressed: () {
+                navigateToinfo(context);
+              },
+            ),
             RaisedButton(
-                child: Text('Answer 2',),
-                onPressed: () => print('Answer 2 chosen!')),
-            RaisedButton(
-                child: Text(
-                  'Answer 3',
-                ),
+                textColor: Colors.green,
+                color: Colors.brown,
+                child: Text('Go to SubPage 2/Plants'),
                 onPressed: () {
-                  //...
-                  print('Answer 3 chosen');
-                }),
+                  navigateToplants(context);
+                }
+            ),
+            RaisedButton(
+                textColor: Colors.green,
+                color: Colors.brown,
+                child: Text('Go to SubPage 3/Connect'),
+                onPressed: () {
+                  navigateTosettings(context);
+                }
+            ),
+            RaisedButton(
+                textColor: Colors.green,
+                color: Colors.brown,
+                child: Text('Go to Sub Page 4/Settings'),
+                onPressed: () {
+                  navigateToconnect(context);
+                }
+            )
           ],
         ),
       ),
     );
+  }
+
+  Future navigateToinfo(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => info()));
+  }
+  Future navigateToplants(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => plants()));
+  }
+  Future navigateTosettings(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => settings()));
+  }
+  Future navigateToconnect(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => connect()));
   }
 }
