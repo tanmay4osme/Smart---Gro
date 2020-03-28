@@ -91,8 +91,8 @@ class SubPage extends StatelessWidget {
           children: <Widget>[
             Text('Click button to back to Main Page'),
             RaisedButton(
-              textColor: Colors.green,
-              color: Colors.brown,
+              textColor: Colors.black,
+              color: Colors.green[200],
               child: Text('Back to Main Page'),
               onPressed: () {
                 backToMainPage(context);
@@ -123,8 +123,8 @@ class SubPage2 extends StatelessWidget {
           children: <Widget>[
             Text('Click button to back to Main Page'),
             RaisedButton(
-              textColor: Colors.green,
-              color: Colors.brown,
+              textColor: Colors.black,
+              color: Colors.green[200],
               child: Text('Back to Main Page'),
               onPressed: () {
                 backToMainPage(context);
@@ -155,8 +155,8 @@ class SubPage3 extends StatelessWidget {
           children: <Widget>[
             Text('Click button to back to Main Page'),
             RaisedButton(
-              textColor: Colors.green,
-              color: Colors.brown,
+              textColor: Colors.black,
+              color: Colors.green[200],
               child: Text('Back to Main Page'),
               onPressed: () {
                 backToMainPage(context);
@@ -187,8 +187,8 @@ class SubPage4 extends StatelessWidget {
           children: <Widget>[
             Text('Click button to back to Main Page'),
             RaisedButton(
-              textColor: Colors.green,
-              color: Colors.brown,
+              textColor: Colors.black,
+              color: Colors.green[200],
               child: Text('Back to Main Page'),
               onPressed: () {
                 backToMainPage(context);
