@@ -29,32 +29,32 @@ class MainPage extends StatelessWidget {
           children: <Widget>[
             Text('Click button to move to SubPage'),
             RaisedButton(
-              textColor: Colors.green,
-              color: Colors.brown,
+              textColor: Colors.black,
+              color: Colors.green[200],
               child: Text('Go to SubPage 1/Info/Getting Started'),
               onPressed: () {
                 navigateToinfo(context);
               },
             ),
             RaisedButton(
-                textColor: Colors.green,
-                color: Colors.brown,
+                textColor: Colors.black,
+                color: Colors.green[200],
                 child: Text('Go to SubPage 2/Plants'),
                 onPressed: () {
                   navigateToplants(context);
                 }
             ),
             RaisedButton(
-                textColor: Colors.green,
-                color: Colors.brown,
+                textColor: Colors.black,
+                color: Colors.green[200],
                 child: Text('Go to SubPage 3/Connect'),
                 onPressed: () {
                   navigateTosettings(context);
                 }
             ),
             RaisedButton(
-                textColor: Colors.green,
-                color: Colors.brown,
+                textColor: Colors.black,
+                color: Colors.green[200],
                 child: Text('Go to Sub Page 4/Settings'),
                 onPressed: () {
                   navigateToconnect(context);
