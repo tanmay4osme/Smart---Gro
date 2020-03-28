@@ -1,45 +1,76 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(App());
 
-class MyApp extends StatelessWidget {
-  void answerQuestion() {
-    print('Answer chosen!');
-  }
-
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var questions = [
-      'What\'s your favoirte color?',
-      'What\'s your favoirte color?',
-    ];
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('My First App'),
-        ),
-        body: Column(
-          children: [
-            Text('The question!'),
+      title: 'Flutter Navigation',
+      home: MainPage(),
+    );
+  }
+}
+
+class MainPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Main Page'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('Click button to move to SubPage'),
             RaisedButton(
-                child: Text(
-                  'Answer 1',
-                ),
-                onPressed: answerQuestion),
-            RaisedButton(
-                child: Text('Answer 2',),
-                onPressed: () => print('Answer 2 chosen!')),
-            RaisedButton(
-                child: Text(
-                  'Answer 3',
-                ),
-                onPressed: () {
-                  //...
-                  print('Answer 3 chosen');
-                }),
+              textColor: Colors.white,
+              color: Colors.blue,
+              child: Text('Go to SubPage'),
+              onPressed: () {
+                navigateToSubPage(context);
+              },
+            )
           ],
         ),
       ),
     );
+  }
+
+  Future navigateToSubPage(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => SubPage()));
+  }
+}
+
+class SubPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Sub Page'),
+        backgroundColor: Colors.redAccent,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('Click button to back to Main Page'),
+            RaisedButton(
+              textColor: Colors.white,
+              color: Colors.redAccent,
+              child: Text('Back to Main Page'),
+              onPressed: () {
+                backToMainPage(context);
+              },
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  void backToMainPage(context) {
+    Navigator.pop(context);
   }
 }
