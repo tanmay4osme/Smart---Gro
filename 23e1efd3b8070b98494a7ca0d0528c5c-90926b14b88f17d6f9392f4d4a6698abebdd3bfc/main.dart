@@ -27,10 +27,34 @@ class MainPage extends StatelessWidget {
             RaisedButton(
               textColor: Colors.white,
               color: Colors.blue,
-              child: Text('Go to SubPage'),
+              child: Text('Go to SubPage 1/Info/Getting Started'),
               onPressed: () {
                 navigateToSubPage(context);
               },
+            ),
+            RaisedButton(
+              textColor: Colors.green,
+              color: Colors.black,
+              child: Text('Go to SubPage 2/Plants'),
+              onPressed: () {
+                navigateToSubPage2(context);
+              }
+            ),
+            RaisedButton(
+              textColor: Colors.orange,
+              color: Colors.red,
+              child: Text('Go to SubPage 3/Connect'),
+              onPressed: () {
+                navigateToSubPage3(context);
+              }
+            ),
+            RaisedButton(
+              textColor: Colors.black,
+              color: Colors.pink,
+              child: Text('Go to Sub Page 4/Settings'),
+              onPressed: () {
+                navigateToSubPage4(context);
+              }
             )
           ],
         ),
@@ -41,6 +65,15 @@ class MainPage extends StatelessWidget {
   Future navigateToSubPage(context) async {
     Navigator.push(context, MaterialPageRoute(builder: (context) => SubPage()));
   }
+  Future navigateToSubPage2(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => SubPage2()));
+  }
+  Future navigateToSubPage3(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => SubPage3()));
+  }
+  Future navigateToSubPage4(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => SubPage4()));
+  }
 }
 
 class SubPage extends StatelessWidget {
@@ -50,6 +83,102 @@ class SubPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Sub Page'),
         backgroundColor: Colors.redAccent,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('Click button to back to Main Page'),
+            RaisedButton(
+              textColor: Colors.white,
+              color: Colors.redAccent,
+              child: Text('Back to Main Page'),
+              onPressed: () {
+                backToMainPage(context);
+              },
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  void backToMainPage(context) {
+    Navigator.pop(context);
+  }
+}
+
+class SubPage2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Sub Page 2'),
+        backgroundColor: Colors.blueAccent,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('Click button to back to Main Page'),
+            RaisedButton(
+              textColor: Colors.white,
+              color: Colors.redAccent,
+              child: Text('Back to Main Page'),
+              onPressed: () {
+                backToMainPage(context);
+              },
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  void backToMainPage(context) {
+    Navigator.pop(context);
+  }
+}
+
+class SubPage3 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Sub Page 3'),
+        backgroundColor: Colors.orangeAccent,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('Click button to back to Main Page'),
+            RaisedButton(
+              textColor: Colors.white,
+              color: Colors.redAccent,
+              child: Text('Back to Main Page'),
+              onPressed: () {
+                backToMainPage(context);
+              },
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  void backToMainPage(context) {
+    Navigator.pop(context);
+  }
+}
+
+class SubPage4 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Sub Page 4'),
+        backgroundColor: Colors.pinkAccent,
       ),
       body: Center(
         child: Column(
