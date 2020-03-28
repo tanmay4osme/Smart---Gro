@@ -17,7 +17,8 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Main Page'),
+        title: Text('Gardening App Home Page'),
+        backgroundColor: Colors.purpleAccent,
       ),
       body: Center(
         child: Column(
@@ -25,36 +26,36 @@ class MainPage extends StatelessWidget {
           children: <Widget>[
             Text('Click button to move to SubPage'),
             RaisedButton(
-              textColor: Colors.white,
-              color: Colors.blue,
+              textColor: Colors.green,
+              color: Colors.brown,
               child: Text('Go to SubPage 1/Info/Getting Started'),
               onPressed: () {
                 navigateToSubPage(context);
               },
             ),
             RaisedButton(
-              textColor: Colors.green,
-              color: Colors.black,
-              child: Text('Go to SubPage 2/Plants'),
-              onPressed: () {
-                navigateToSubPage2(context);
-              }
+                textColor: Colors.green,
+                color: Colors.brown,
+                child: Text('Go to SubPage 2/Plants'),
+                onPressed: () {
+                  navigateToSubPage2(context);
+                }
             ),
             RaisedButton(
-              textColor: Colors.orange,
-              color: Colors.red,
-              child: Text('Go to SubPage 3/Connect'),
-              onPressed: () {
-                navigateToSubPage3(context);
-              }
+                textColor: Colors.green,
+                color: Colors.brown,
+                child: Text('Go to SubPage 3/Connect'),
+                onPressed: () {
+                  navigateToSubPage3(context);
+                }
             ),
             RaisedButton(
-              textColor: Colors.black,
-              color: Colors.pink,
-              child: Text('Go to Sub Page 4/Settings'),
-              onPressed: () {
-                navigateToSubPage4(context);
-              }
+                textColor: Colors.green,
+                color: Colors.brown,
+                child: Text('Go to Sub Page 4/Settings'),
+                onPressed: () {
+                  navigateToSubPage4(context);
+                }
             )
           ],
         ),
