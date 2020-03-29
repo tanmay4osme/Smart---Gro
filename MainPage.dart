@@ -28,7 +28,6 @@ class MainPage extends StatelessWidget {
             child: Scaffold(
               backgroundColor: Colors.transparent,
               appBar: AppBar(
-                title: Text('Gardening App Home Page'),
                 backgroundColor: Colors.green[200],
                 leading: IconButton(
                     icon: Icon(
