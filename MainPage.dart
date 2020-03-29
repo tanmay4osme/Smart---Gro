@@ -54,13 +54,12 @@ class MainPage extends StatelessWidget {
                       child: Text(
                         "Getting Started",
                         style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontWeight: FontWeight.bold,
                             fontSize: 30.0),
                       ),
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15)
-                      ),
+                          borderRadius: BorderRadius.circular(15)),
                       onPressed: () {
                         navigateToinfo(context);
                       },
@@ -71,13 +70,12 @@ class MainPage extends StatelessWidget {
                         child: Text(
                           "Plants!",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontWeight: FontWeight.bold,
                               fontSize: 30.0),
                         ),
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)
-                        ),
+                            borderRadius: BorderRadius.circular(15)),
                         onPressed: () {
                           navigateToplants(context);
                         }),
@@ -87,13 +85,12 @@ class MainPage extends StatelessWidget {
                         child: Text(
                           "Connect to Google",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontWeight: FontWeight.bold,
                               fontSize: 30.0),
                         ),
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)
-                        ),
+                            borderRadius: BorderRadius.circular(15)),
                         onPressed: () {
                           navigateTosettings(context);
                         }),
@@ -103,13 +100,12 @@ class MainPage extends StatelessWidget {
                         child: Text(
                           "Settings",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontWeight: FontWeight.bold,
                               fontSize: 30.0),
                         ),
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)
-                        ),
+                            borderRadius: BorderRadius.circular(15)),
                         onPressed: () {
                           navigateToconnect(context);
                         })
