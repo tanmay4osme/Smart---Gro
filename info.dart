@@ -28,41 +28,52 @@ class info extends StatelessWidget {
   ;
 
   final String beingSustainable =
-      'Make sure you use safe and sustainable practices when gardening. '
-      'Avoid synthetic fertilizers from the store and make your'
-      ' own using food scraps and raked leaves. \n Mature compost can '
-      'even be used as mulch!\nWork with nature to attract insects that'
+      '     Avoid synthetic fertilizers from the store and make your'
+      ' own using food scraps and raked leaves. Mature compost can '
+      'even be used as mulch! Work with nature to attract insects that '
       'encourage plant growth '
 //• <--- for bullet points
       ;
 
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
         backgroundColor: Colors.brown,
       ),
-      body: Center(
+      body: Container(
+        padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+      decoration: BoxDecoration(
+      image: DecorationImage(
+      image: AssetImage("assets/image/Plant2.PNG"),
+      fit: BoxFit.cover)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Why Sustainability Matters!\n\n',
+            Text('Why Sustainability Matters!\n',
               style: TextStyle(
                   color: Colors.brown[800],
                   fontWeight: FontWeight.bold,
-                  fontSize: 30.0),
+                  fontSize: 21.0),
+            ),
+            Text(sustainabilityMatters, textAlign: TextAlign.justify,
+              style: TextStyle(
+                  color: Colors.brown[800],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 13.0),
             ),
             Text(beingSustainable, textAlign: TextAlign.justify,
               style: TextStyle(
                   color: Colors.brown[800],
                   fontWeight: FontWeight.bold,
-                  fontSize: 20.0),
+                  fontSize: 13.0),
             ),
             RaisedButton(
               textColor: Colors.black,
               color: Colors.green[200],
               child: Text("Learn more about insecticides",
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 20.0),
               ),
@@ -78,7 +89,7 @@ class info extends StatelessWidget {
               color: Colors.green[200],
               child: Text("Learn more about fertilizers",
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 20.0),
               ),
@@ -94,7 +105,7 @@ class info extends StatelessWidget {
               color: Colors.green[200],
               child: Text("Back to Main Page",
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 20.0),
               ),
