@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'info.dart';
 
 class Insecticides extends StatelessWidget{
   @override
@@ -47,4 +48,6 @@ class Insecticides extends StatelessWidget{
     );
   }
 }
-
+void backToMainPage(context) {
+  Navigator.pop(context);
+}
