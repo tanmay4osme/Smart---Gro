@@ -41,7 +41,7 @@ class MainPage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text('Click button to move to SubPage'),
+                    Text('Welcome!'),
                     RaisedButton(
                       textColor: Colors.black,
                       color: Colors.green[200],
