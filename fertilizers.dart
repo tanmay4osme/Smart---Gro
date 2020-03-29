@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'info.dart';
-
 class Fertilizers extends StatelessWidget {
   @override
   final String tips = '\t• avoid using citrus peels since they '
@@ -26,7 +25,7 @@ class Fertilizers extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Using Insecticides'),
+        title: Text('Sustainable Fertilizer!'),
         backgroundColor: Colors.brown,
       ),
       body: Center(
@@ -37,17 +36,34 @@ class Fertilizers extends StatelessWidget {
                 'polluted runoff water. Creating your own'
                 'fertilizers through composting is easy, cost-'
                 'effective, and helps to reduce food waste. Here '
-                'are some quick tips on composting: \n' ),
-            Text(tips, textAlign: TextAlign.justify),
+                'are some quick tips on composting: \n', textAlign: TextAlign.justify,
+              style: TextStyle(
+                  color: Colors.brown[800],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0),
+            ),
+            Text(tips, textAlign: TextAlign.justify,
+              style: TextStyle(
+                  color: Colors.brown[800],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14.0),
+            ),
             Text('\n\nHere\'s how you can make your own compost bin for '
-            'less than \$10'),
-            Text(compostingInstructions, textAlign: TextAlign.justify,)
+                'less than \$10\n', textAlign: TextAlign.justify,
+              style: TextStyle(
+                  color: Colors.brown[800],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0),
+            ),
+            Text(compostingInstructions, textAlign: TextAlign.justify,
+              style: TextStyle(
+                  color: Colors.brown[800],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14.0),
+            ),
           ],
         ),
       ),
     );
   }
-}
-void backToMainPage(context) {
-  Navigator.pop(context);
 }
