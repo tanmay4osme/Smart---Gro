@@ -12,7 +12,13 @@ class settings extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Click button to back to Main Page'),
+            Text('Settings'),
+            Text('Privacy Policy: This page is used to inform visitors regarding our policies '
+                'with the collection, use, and disclosure of Personal Information if anyone decided to'
+                ' use our Service. If you choose to use our Service, then you agree to the collection '
+                'and use of information in relation to this policy. The Personal Information that [I/We] collect '
+                'is used for providing and improving the Service. We will not use or share your information with '
+                'anyone except as described in this Privacy Policy.'),
             RaisedButton(
               textColor: Colors.black,
               color: Colors.green[200],
