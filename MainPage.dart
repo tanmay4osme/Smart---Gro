@@ -41,11 +41,11 @@ class MainPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      "Plant-Eco",
+                      "Smart-Gro",
                       style: TextStyle(
-                          color: Colors.brown,
+                          color: Colors.brown[800],
                           fontWeight: FontWeight.bold,
-                          fontSize: 70.0),
+                          fontSize: 80.0),
                     ),
                     RaisedButton(
                       textColor: Colors.black,
