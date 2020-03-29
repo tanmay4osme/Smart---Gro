@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'MainPage.dart';
 class MyPlants extends StatelessWidget {
   List<String> userPlants = new List<String>();
-
-  MyPlants(this.userPlants);
+  MyPlants(String user) {
+    userPlants.add(user);
+  }
 
   @override
   Widget build(BuildContext context) {
