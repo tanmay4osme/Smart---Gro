@@ -19,6 +19,9 @@ class settings extends StatelessWidget {
                 'and use of information in relation to this policy. The Personal Information that [I/We] collect '
                 'is used for providing and improving the Service. We will not use or share your information with '
                 'anyone except as described in this Privacy Policy.'),
+            Text('Disclaimer: Plants will not be provided by the creators of this application and the growth of illegal plants is neither '
+                'advised or endorced. In addition, be careful to ensure that plants are not grown in toxic enviornments and are grown in'
+                'a location that belongs to the user.'),
             RaisedButton(
               textColor: Colors.black,
               color: Colors.green[200],
