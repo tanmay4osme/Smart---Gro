@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'main.dart';
 import 'insecticides.dart';
 import 'fertilizers.dart';
-import 'reuse.dart';
 
 class info extends StatelessWidget {
   @override
@@ -26,33 +25,50 @@ class info extends StatelessWidget {
       'They also decrease the number of trips to the grocery store and '
       'reduce the amount of waste produced by plastic packages or '
       'cardboard boxes.' '\n'
-    ;
+  ;
 
   final String beingSustainable =
-    'Make sure you use safe and sustainable practices when gardening. '
-    'Avoid synthetic fertilizers from the store and make your'
-    ' own using food scraps and raked leaves. \n Mature compost can '
-    'even be used as mulch!\nWork with nature to attract insects that'
-    'encourage plant growth '
+      'Make sure you use safe and sustainable practices when gardening. '
+      'Avoid synthetic fertilizers from the store and make your'
+      ' own using food scraps and raked leaves. \n Mature compost can '
+      'even be used as mulch!\nWork with nature to attract insects that'
+      'encourage plant growth '
 //• <--- for bullet points
-  ;
+      ;
 
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Being Sustainable'),
         backgroundColor: Colors.brown,
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Why Sustainability Matters\n\n'),
-            Text(beingSustainable, textAlign: TextAlign.justify),
+            Text('Why Sustainability Matters!\n\n',
+              style: TextStyle(
+                  color: Colors.brown[800],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30.0),
+            ),
+            Text(beingSustainable, textAlign: TextAlign.justify,
+              style: TextStyle(
+                  color: Colors.brown[800],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0),
+            ),
             RaisedButton(
               textColor: Colors.black,
               color: Colors.green[200],
-              child: Text('Learn more about insecticides'),
+              child: Text("Learn more about insecticides",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0),
+              ),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)
+              ),
               onPressed: () {
                 navigateToInsecticides(context);
               },
@@ -60,7 +76,15 @@ class info extends StatelessWidget {
             RaisedButton(
               textColor: Colors.black,
               color: Colors.green[200],
-              child: Text('Learn more about fertilizers'),
+              child: Text("Learn more about fertilizers",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0),
+              ),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)
+              ),
               onPressed: () {
                 navigateToFertilizers(context);
               },
@@ -68,15 +92,15 @@ class info extends StatelessWidget {
             RaisedButton(
               textColor: Colors.black,
               color: Colors.green[200],
-              child: Text('Learn more about reusing'),
-              onPressed: () {
-                navigateToReuse(context);
-              },
-            ),
-            RaisedButton(
-              textColor: Colors.black,
-              color: Colors.green[200],
-              child: Text('Back to Main Page'),
+              child: Text("Back to Main Page",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0),
+              ),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)
+              ),
               onPressed: () {
                 backToMainPage(context);
               },
@@ -94,10 +118,6 @@ class info extends StatelessWidget {
   Future navigateToFertilizers(context) async {
     Navigator.push(context, MaterialPageRoute(builder:
         (context) => Fertilizers()));
-  }
-  Future navigateToReuse(context) async {
-    Navigator.push(context, MaterialPageRoute(builder:
-        (context) => Reuse()));
   }
 }
 void backToMainPage(context) {
