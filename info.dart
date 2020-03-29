@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'main.dart';
 import 'insecticides.dart';
 import 'fertilizers.dart';
+import 'reuse.dart';
 
 class info extends StatelessWidget {
   @override
@@ -67,6 +68,14 @@ class info extends StatelessWidget {
             RaisedButton(
               textColor: Colors.black,
               color: Colors.green[200],
+              child: Text('Learn more about reusing'),
+              onPressed: () {
+                navigateToReuse(context);
+              },
+            ),
+            RaisedButton(
+              textColor: Colors.black,
+              color: Colors.green[200],
               child: Text('Back to Main Page'),
               onPressed: () {
                 backToMainPage(context);
@@ -85,6 +94,10 @@ class info extends StatelessWidget {
   Future navigateToFertilizers(context) async {
     Navigator.push(context, MaterialPageRoute(builder:
         (context) => Fertilizers()));
+  }
+  Future navigateToReuse(context) async {
+    Navigator.push(context, MaterialPageRoute(builder:
+        (context) => Reuse()));
   }
 }
 void backToMainPage(context) {
