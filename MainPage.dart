@@ -43,7 +43,7 @@ class MainPage extends StatelessWidget {
                     Text(
                       "Smart-Gro",
                       style: TextStyle(
-                          color: Colors.green[910],
+                          color: Colors.brown[900],
                           fontWeight: FontWeight.bold,
                           fontSize: 80.0),
                     ),
