@@ -92,7 +92,7 @@ class MainPage extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15)),
                         onPressed: () {
-                          navigateTosettings(context);
+                          navigateToconnect(context);
                         }),
                     RaisedButton(
                         textColor: Colors.black,
@@ -107,7 +107,7 @@ class MainPage extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15)),
                         onPressed: () {
-                          navigateToconnect(context);
+                          navigateTosettings(context);
                         })
                   ],
                 ),
