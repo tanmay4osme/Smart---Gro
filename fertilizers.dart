@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'info.dart';
+
 class Fertilizers extends StatelessWidget {
   @override
   final String tips = '\t• avoid using citrus peels since they '
@@ -28,38 +29,51 @@ class Fertilizers extends StatelessWidget {
         title: Text('Sustainable Fertilizer!'),
         backgroundColor: Colors.brown,
       ),
-      body: Center(
+      body: Container(
+        padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/image/Plant2.PNG"),
+                fit: BoxFit.cover)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Synthetic fertilizers often produce '
-                'polluted runoff water. Creating your own'
-                'fertilizers through composting is easy, cost-'
-                'effective, and helps to reduce food waste. Here '
-                'are some quick tips on composting: \n', textAlign: TextAlign.justify,
+            Text(
+              'Synthetic fertilizers often produce '
+              'polluted runoff water. Creating your own'
+              'fertilizers through composting is easy, cost-'
+              'effective, and helps to reduce food waste. Here '
+              'are some quick tips on composting: \n',
+              textAlign: TextAlign.justify,
               style: TextStyle(
                   color: Colors.brown[800],
                   fontWeight: FontWeight.bold,
-                  fontSize: 20.0),
+                  fontSize: 17.0),
             ),
-            Text(tips, textAlign: TextAlign.justify,
+            Text(
+              tips,
+              textAlign: TextAlign.justify,
               style: TextStyle(
                   color: Colors.brown[800],
                   fontWeight: FontWeight.bold,
                   fontSize: 14.0),
             ),
-            Text('\n\nHere\'s how you can make your own compost bin for '
-                'less than \$10\n', textAlign: TextAlign.justify,
+            Text(
+              '\n\nHere\'s how you can make your own compost bin for '
+              'less than \$10\n',
+              textAlign: TextAlign.justify,
               style: TextStyle(
                   color: Colors.brown[800],
                   fontWeight: FontWeight.bold,
-                  fontSize: 20.0),
+                  fontSize: 17.0),
             ),
-            Text(compostingInstructions, textAlign: TextAlign.justify,
+            Text(
+              compostingInstructions,
+              textAlign: TextAlign.justify,
               style: TextStyle(
                   color: Colors.brown[800],
                   fontWeight: FontWeight.bold,
-                  fontSize: 14.0),
+                  fontSize: 13.0),
             ),
           ],
         ),
