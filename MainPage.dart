@@ -29,7 +29,7 @@ class MainPage extends StatelessWidget {
               backgroundColor: Colors.transparent,
               appBar: AppBar(
                 title: Text('Gardening App Home Page'),
-                backgroundColor: Colors.purpleAccent,
+                backgroundColor: Colors.green[200],
                 leading: IconButton(
                     icon: Icon(
                       Icons.list,
@@ -41,11 +41,27 @@ class MainPage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text('Welcome!'),
+                    Text(
+                      "Plant-Eco",
+                      style: TextStyle(
+                          color: Colors.brown,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 70.0),
+                    ),
                     RaisedButton(
                       textColor: Colors.black,
                       color: Colors.green[200],
-                      child: Text('Getting Started'),
+                      highlightElevation: 2,
+                      child: Text(
+                        "Getting Started",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30.0),
+                      ),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)
+                      ),
                       onPressed: () {
                         navigateToinfo(context);
                       },
@@ -53,21 +69,48 @@ class MainPage extends StatelessWidget {
                     RaisedButton(
                         textColor: Colors.black,
                         color: Colors.green[200],
-                        child: Text('Plants!'),
+                        child: Text(
+                          "Plants!",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 30.0),
+                        ),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)
+                        ),
                         onPressed: () {
                           navigateToplants(context);
                         }),
                     RaisedButton(
                         textColor: Colors.black,
                         color: Colors.green[200],
-                        child: Text('Connect to Google'),
+                        child: Text(
+                          "Connect to Google",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 30.0),
+                        ),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)
+                        ),
                         onPressed: () {
                           navigateTosettings(context);
                         }),
                     RaisedButton(
                         textColor: Colors.black,
                         color: Colors.green[200],
-                        child: Text('Settings'),
+                        child: Text(
+                          "Settings",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 30.0),
+                        ),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)
+                        ),
                         onPressed: () {
                           navigateToconnect(context);
                         })
