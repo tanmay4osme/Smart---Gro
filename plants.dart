@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:csv/csv.dart';
 import 'dart:async' show Future;
 import 'package:flutter/services.dart' show rootBundle;
-import 'myPlants.dart';
+import 'MyPlants.dart';
 
 class TableLayout extends StatefulWidget {
   @override
@@ -15,6 +15,7 @@ class _TableLayoutState extends State<TableLayout> {
   List<String> descriptions;
   final List<int> colorCodes = List<int>();
   List<String> userPlants = new List<String>();
+  MyPlants hehe;
   loadAsset() async {
     final myData = await rootBundle.loadString('assets/plantInfo-clean.csv');
     print(myData);
@@ -26,14 +27,8 @@ class _TableLayoutState extends State<TableLayout> {
   }
   @override
   Widget build(BuildContext context) {
+    loadAsset();
     return Scaffold(
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        floatingActionButton: FloatingActionButton(
-            child: Icon(Icons.refresh),
-            onPressed: () async {
-              await loadAsset();
-              print(plantNames);
-            }),
         appBar: AppBar(
           title: Text("Plants!"),
         ),
@@ -44,8 +39,7 @@ class _TableLayoutState extends State<TableLayout> {
             return new GestureDetector(
               onDoubleTap: () {
                 print(plantNames[index]);
-                userPlants.add(plantNames[index]);
-                print(userPlants);
+                hehe = new MyPlants(plantNames[index]);
               },
               child: Container(
                 height: 50,
@@ -63,3 +57,4 @@ class _TableLayoutState extends State<TableLayout> {
 void backToMainPage(context) {
   Navigator.pop(context);
 }
+
