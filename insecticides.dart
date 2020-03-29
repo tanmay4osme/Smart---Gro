@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'info.dart';
-class Insecticides extends StatelessWidget{
+
+class Insecticides extends StatelessWidget {
   @override
   final String tips = '• Use a mix of 2 '
       'teaspoons neem oil and 1 teaspoon of mild '
@@ -23,8 +24,7 @@ class Insecticides extends StatelessWidget{
       'tablespoons of dishwashing soap and two '
       'tablespoons vegetable oil. Transfer the '
       'solution to a spray bottle and spray your '
-      'plants and the surrounding area. '
-  ;
+      'plants and the surrounding area. ';
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,24 +32,33 @@ class Insecticides extends StatelessWidget{
         title: Text('Sustainable Insecticides'),
         backgroundColor: Colors.brown,
       ),
-      body: Center(
+      body: Container(
+        padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/image/Plant2.PNG"),
+                fit: BoxFit.cover)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Avoid the use of chemical insecticides'
-                ' to reduce chemical pollution. Here are '
-                'some more environmentally safe alternatives'
-                ' to prevent pests. \n\n', textAlign: TextAlign.justify,
+            Text(
+              'Avoid the use of chemical insecticides'
+              ' to reduce chemical pollution.\nHere are '
+              'some more environmentally safe alternatives'
+              ' to prevent pests. \n',
+              textAlign: TextAlign.justify,
               style: TextStyle(
                   color: Colors.brown[800],
                   fontWeight: FontWeight.bold,
                   fontSize: 20.0),
             ),
-            Text(tips, textAlign: TextAlign.justify,
+            Text(
+              tips,
+              textAlign: TextAlign.justify,
               style: TextStyle(
                   color: Colors.brown[800],
                   fontWeight: FontWeight.bold,
-                  fontSize: 14.0),
+                  fontSize: 16.0),
             ),
           ],
         ),
