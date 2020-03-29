@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'info.dart';
 
 class Fertilizers extends StatelessWidget {
   @override
@@ -46,4 +47,7 @@ class Fertilizers extends StatelessWidget {
       ),
     );
   }
+}
+void backToMainPage(context) {
+  Navigator.pop(context);
 }
