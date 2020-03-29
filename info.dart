@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'main.dart';
 import 'insecticides.dart';
 import 'fertilizers.dart';
+import 'reuse.dart';
 
 class info extends StatelessWidget {
   @override
@@ -71,7 +72,7 @@ class info extends StatelessWidget {
             RaisedButton(
               textColor: Colors.black,
               color: Colors.green[200],
-              child: Text("Learn more about insecticides",
+              child: Text("Learn More About Insecticides",
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
@@ -87,7 +88,7 @@ class info extends StatelessWidget {
             RaisedButton(
               textColor: Colors.black,
               color: Colors.green[200],
-              child: Text("Learn more about fertilizers",
+              child: Text("Learn More About Fertilizers",
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
@@ -103,7 +104,7 @@ class info extends StatelessWidget {
             RaisedButton(
               textColor: Colors.black,
               color: Colors.green[200],
-              child: Text("Back to Main Page",
+              child: Text("Learn More About Reusing",
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
@@ -113,7 +114,7 @@ class info extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15)
               ),
               onPressed: () {
-                backToMainPage(context);
+                navigateToReuse(context);
               },
             ),
           ],
@@ -129,6 +130,10 @@ class info extends StatelessWidget {
   Future navigateToFertilizers(context) async {
     Navigator.push(context, MaterialPageRoute(builder:
         (context) => Fertilizers()));
+  }
+  Future navigateToReuse(context) async {
+    Navigator.push(context, MaterialPageRoute(builder:
+        (context) => Reuse()));
   }
 }
 void backToMainPage(context) {
