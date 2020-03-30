@@ -153,6 +153,6 @@ class MainPage extends StatelessWidget {
     Navigator.push(context, MaterialPageRoute(builder: (context) => connect()));
   }
   Future navigateToMyPlants(context) async {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Table()));
+    Navigator.push(context, MaterialPageRoute(builder: (context) => TableLayout1()));
   }
 }
