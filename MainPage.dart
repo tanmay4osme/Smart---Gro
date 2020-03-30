@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:hoohacks2020/MyPlants.dart';
 import 'info.dart';
 import 'plants.dart';
 import 'settings.dart';
@@ -43,7 +44,7 @@ class MainPage extends StatelessWidget {
                     Text(
                       "Smart-Gro",
                       style: TextStyle(
-                          color: Colors.brown[900],
+                          color: Colors.brown[800],
                           fontWeight: FontWeight.bold,
                           fontSize: 80.0),
                     ),
@@ -54,12 +55,13 @@ class MainPage extends StatelessWidget {
                       child: Text(
                         "Getting Started",
                         style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 30.0),
                       ),
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15)),
+                          borderRadius: BorderRadius.circular(15)
+                      ),
                       onPressed: () {
                         navigateToinfo(context);
                       },
@@ -70,12 +72,13 @@ class MainPage extends StatelessWidget {
                         child: Text(
                           "Plants!",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 30.0),
                         ),
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)),
+                            borderRadius: BorderRadius.circular(15)
+                        ),
                         onPressed: () {
                           navigateToplants(context);
                         }),
@@ -85,12 +88,29 @@ class MainPage extends StatelessWidget {
                         child: Text(
                           "Connect to Google",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 30.0),
                         ),
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)),
+                            borderRadius: BorderRadius.circular(15)
+                        ),
+                        onPressed: () {
+                          navigateTosettings(context);
+                        }),
+                    RaisedButton(
+                        textColor: Colors.black,
+                        color: Colors.green[200],
+                        child: Text(
+                          "Settings",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 30.0),
+                        ),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)
+                        ),
                         onPressed: () {
                           navigateToconnect(context);
                         }),
@@ -98,7 +118,7 @@ class MainPage extends StatelessWidget {
                         textColor: Colors.black,
                         color: Colors.green[200],
                         child: Text(
-                          "Settings",
+                          "My Plants",
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
@@ -107,7 +127,7 @@ class MainPage extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15)),
                         onPressed: () {
-                          navigateTosettings(context);
+                          navigateToMyPlants(context);
                         })
                   ],
                 ),
@@ -131,5 +151,8 @@ class MainPage extends StatelessWidget {
 
   Future navigateToconnect(context) async {
     Navigator.push(context, MaterialPageRoute(builder: (context) => connect()));
+  }
+  Future navigateToMyPlants(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => Table()));
   }
 }
