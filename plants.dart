@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:csv/csv.dart';
+import 'package:flutter/material.dart';
 import 'dart:async' show Future;
 import 'package:flutter/services.dart' show rootBundle;
 import 'MyPlants.dart';
@@ -12,10 +13,9 @@ class TableLayout extends StatefulWidget {
 class _TableLayoutState extends State<TableLayout> {
   List<List<dynamic>> data = [];
   List<String> plantNames = new List<String>();
-  List<String> descriptions;
   final List<int> colorCodes = List<int>();
   List<String> userPlants = new List<String>();
-  MyPlants hehe;
+
   loadAsset() async {
     final myData = await rootBundle.loadString('assets/plantInfo-clean.csv');
     print(myData);
@@ -28,9 +28,10 @@ class _TableLayoutState extends State<TableLayout> {
   @override
   Widget build(BuildContext context) {
     loadAsset();
+    MyPlants goop = new MyPlants();
     return Scaffold(
         appBar: AppBar(
-          title: Text("Plants!"),
+          title: Text("Double tap the Plants you want!"),
         ),
         body: ListView.separated(
           padding: const EdgeInsets.all(8),
@@ -39,7 +40,7 @@ class _TableLayoutState extends State<TableLayout> {
             return new GestureDetector(
               onDoubleTap: () {
                 print(plantNames[index]);
-                hehe = new MyPlants(plantNames[index]);
+                goop.move(data[index]);
               },
               child: Container(
                 height: 50,
